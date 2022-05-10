@@ -81,7 +81,7 @@ _install_os_packages:
 	$(info [*] Installing jq...)
 	yum install jq -y
 	$(info [*] Upgrading Python SAM CLI and CloudFormation linter to the latest version...)
-	python3 -m pip install --upgrade --user cfn-lint
+	python3 -m pip install --upgrade --user cfn-lint future==0.18.2
 	curl -LO https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip
 	unzip aws-sam-cli-linux-x86_64.zip -d sam-installation
 	./sam-installation/install --update
